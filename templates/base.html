@@ -27,8 +27,22 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2>Your itens</h2>
-                
+              <h2>Write your task</h2>
+              <form action='' method='post'>
+                {% csrf_token %}
+                <div class="form-row">
+                  <div class='col-11'>
+                    <input id='new_task' class="form-control" type="text" placeholder="Task" name='new_task'>
+                  </div>
+                  <button type="submit" class="btn btn-primary">SUBMIT</button>
+                </div>
+              </form>
+
+              {% for task in tasks %}
+              <ul class="list-group">
+                <li class="list-group-item">{{task}}</li>
+              </ul>
+              {% endfor %}
             </div>
         </div>
     </div>
