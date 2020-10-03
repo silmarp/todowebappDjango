@@ -19,5 +19,7 @@ from tasks import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='homepage')
+    path('', views.index, name='homepage'),
+    path('addtask', views.add_task, name='add_task'),
+    path('removetask/<task_id>', views.remove_task, name='remove_task')
 ]
