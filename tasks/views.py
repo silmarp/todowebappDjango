@@ -5,7 +5,7 @@ from .models import Task
 
 # Create your views here.
 def index(request):
-    #### Query de objetos da classe Task e lista deles a ser passada para o front-end
+    ### Query de objetos da classe Task e lista deles a ser passada para o front-end
     tasks = []
     query = Task.objects.all()
 
@@ -37,3 +37,4 @@ def remove_task(request, task_id):
 
     
     return HttpResponseRedirect("/")
+
